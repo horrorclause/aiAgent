@@ -23,12 +23,12 @@ response = client.models.generate_content(
     contents= messages,
 )
 
+# Prints Response
+# print(f"[+] Arguments: {sys.argv}")
+print('\n',response.text)
+
 # Checks if verbose flag is set
 if len(sys.argv)>2 and sys.argv[2] == "--verbose":
     print(f"User prompt: {user_prompt}")
     print(f"Prompt tokens: {response.usage_metadata.prompt_token_count}")
     print(f"Response tokens: {response.usage_metadata.candidates_token_count}")
-
-# Prints Response
-# print(f"[+] Arguments: {sys.argv}")
-print('\n',response.text)
