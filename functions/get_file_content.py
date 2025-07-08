@@ -1,4 +1,12 @@
+#!/bin/python3
+
+'''
+This file is to check the file path to ensure accuracy, and to read the 
+contents of a file
+'''
+
 import os
+from functions.fileContentsConfig import MAX_CHARS
 
 def get_file_content(working_directory, file_path):
     supplied_file_path = file_path
@@ -20,10 +28,10 @@ def get_file_content(working_directory, file_path):
             return f'Error: File not found or is not a regular file: "{supplied_file_path}"'
 
         with open(file_path, "r") as file:
-            read_file = file.readlines()
-            return "".join(read_file)
+            read_file = file.read(MAX_CHARS)
+            return read_file
         
         read_file.close()
-        
+
     except Exception as e:
         return f"Error: {e}"
