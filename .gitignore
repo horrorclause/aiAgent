@@ -3,3 +3,5 @@ __pycache__/
 .env
 .python-version
 .gitignore
+pythonproject.toml
+uv.lock
