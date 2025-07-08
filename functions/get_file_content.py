@@ -24,5 +24,6 @@ def get_file_content(working_directory, file_path):
             return "".join(read_file)
         
         read_file.close()
+        
     except Exception as e:
         return f"Error: {e}"
