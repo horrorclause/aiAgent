@@ -31,9 +31,5 @@ def get_files_info(working_directory, directory=None):
 
                 print(f'- {file_name}: file_size={file_size} bytes, is_dir={is_dir}')
 
-            
-
     except Exception as e:
         return f'Error: "{e}"'
-    
-
