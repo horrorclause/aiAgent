@@ -30,5 +30,22 @@ from functions.get_file_content import get_file_content
 print('\n[+] Beginning "get_file_content" tests:\n')
 
 # Test Scenario #1
+print('\n[+] Test Scenario #1\n')
 file = get_file_content("calculator", "lorem.txt")
 print(f'Result for "lorem.txt" file:\n{file}\n')
+
+# Test Scenario #2
+print('\n[+] Test Scenario #2\n')
+file2 = get_file_content("calculator", "main.py")
+print(f'Result for "main.py" file:\n{file2}\n')
+
+# Test Scenario #3
+print('\n[+] Test Scenario #3\n')
+file3 = get_file_content("calculator", "pkg/calculator.py")
+print(f'Result for "pkg/calculator.py" file:\n{file3}\n')
+
+# Test Scenario #4
+print('\n[+] Test Scenario #4\n')
+file4 = get_file_content("calculator", "/bin/cat")
+print(f'Result for "/bin/cat" file:\n{file4}\n')
+

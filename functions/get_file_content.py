@@ -28,8 +28,11 @@ def get_file_content(working_directory, file_path):
             return f'Error: File not found or is not a regular file: "{supplied_file_path}"'
 
         with open(file_path, "r") as file:
-            read_file = file.read(MAX_CHARS)
-            return read_file
+            read_file = file.read()
+            if len(read_file) > MAX_CHARS:
+                return read_file[:MAX_CHARS] + '\n\n' + f'[...File "{file_path}" truncated at {MAX_CHARS} characters]'
+            else:
+                return read_file
         
         read_file.close()
 
