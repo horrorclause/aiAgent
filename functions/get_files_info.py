@@ -16,8 +16,11 @@ def get_files_info(working_directory, directory=None):
 
         if not ap_directory.startswith(ap_working_dir):
             return f'Error: Cannot list "{supplied_directory}" as it is outside the permitted working directory'
+        
+        if os.path.isdir(directory) is False:
+            return f'Error: "{directory}" is not a directory'
             
 
     except Exception as e:
-        return f'Something happened: {e}'
+        return f'Something happened: "{e}"'
     
