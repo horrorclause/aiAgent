@@ -5,7 +5,6 @@ def write_file(working_directory,file_path,content):
     supplied_file_path = file_path
 
     try:
-        #os.makedirs(working_directory, exist_ok=True)
         
         if file_path is not None:
             file_path = os.path.join(working_directory,file_path) 

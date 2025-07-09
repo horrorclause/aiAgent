@@ -83,3 +83,5 @@ print(f'Result for "pkg/morelorem.txt" file:\n\n{write2}\n')
 print('\n[+] Test Scenario #3\n')
 write3 = write_file("calculator", "/tmp/temp.txt", "this should not be allowed")
 print(f'Result for "/tmp/temp.txt" file:\n\n{write3}\n')
+
+print('\n\n[-] Ending "write_file" tests [-]\n')
