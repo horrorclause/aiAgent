@@ -2,6 +2,11 @@
 
 from functions.get_files_info import get_files_info
 from functions.get_file_content import get_file_content
+from functions.write_file import write_file
+
+'''
+Start of get_files_info test
+'''
 
 print('\n\n[+] Beginning "get_files_info" tests:\n')
 
@@ -31,6 +36,11 @@ print(f"Result for aiAgent directory:\n{fileInfo6}")
 
 print('\n\n[-] Ending "get_files_info" tests [-]\n')
 
+
+'''
+Start of get_file_content test
+'''
+
 print('\n\n[+] Beginning "get_file_content" tests:\n')
 
 # Test Scenario #1
@@ -54,3 +64,13 @@ file4 = get_file_content("calculator", "/bin/cat")
 print(f'Result for "/bin/cat" file:\n{file4}\n')
 
 print('\n\n[-] Ending "get_file_content" tests [-]\n')
+
+
+'''
+Start of write_file test
+'''
+
+print('\n\n[+] Beginning "write_file" tests:\n')
+
+write1 = write_file("calculator", "lorem.txt", "wait, this isn't lorem ipsum")
+print(f'Result for "lorem.txt" file:\n{write1}\n')
